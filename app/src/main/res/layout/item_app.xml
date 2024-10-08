@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_app.xml -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/appIconImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/appNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/appIconImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="App Name" />
+
+        <TextView
+            android:id="@+id/memoryUsageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="4dp"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_memory"
+            app:layout_constraintStart_toStartOf="@id/appNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/appNameTextView"
+            tools:text="Memory: 100MB" />
+
+        <TextView
+            android:id="@+id/usageTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="4dp"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_time"
+            app:layout_constraintStart_toStartOf="@id/memoryUsageTextView"
+            app:layout_constraintTop_toBottomOf="@id/memoryUsageTextView"
+            tools:text="Usage: 30m" />
+
+        <TextView
+            android:id="@+id/batteryConsumptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="4dp"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_battery"
+            app:layout_constraintStart_toStartOf="@id/usageTimeTextView"
+            app:layout_constraintTop_toBottomOf="@id/usageTimeTextView"
+            tools:text="Battery: 5.2%" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/permissionsChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/batteryConsumptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/batteryConsumptionTextView"
+            tools:text="10 Permissions" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/moreInfoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="More Info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/permissionsChip" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
